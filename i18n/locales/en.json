@@ -1,0 +1,141 @@
+{
+  "$": {
+    "base": { "title": "FAnn CRM", "description": "Customer profiles and sales guidance for beauty retail", "workspace": "Sales workspace", "smart_profiles": "Smart selling" },
+    "language": { "change": "Change language" },
+    "layout": {
+      "crm_online": "CRM online",
+      "toggle_color_mode": "Toggle colour mode",
+      "smarter_offers": "Smarter offers",
+      "smarter_offers_description": "Match customer profiles with the right products."
+    },
+    "breadcrumb": { "create": "New record", "edit": "Edit" },
+    "navbar": { "logout": "Sign out" },
+    "login": {
+      "title": "FAnn CRM sign in",
+      "label": "Sign in",
+      "description": "Sign in with an administrator account",
+      "keywords": "fann crm",
+      "failed": "Sign in failed",
+      "hero_eyebrow": "Smart customer profiles",
+      "hero_title": "Recognise the motivation. Recommend the right product.",
+      "hero_description": "Practical guidance for customer conversations, product choice, alternatives and sensitive upselling.",
+      "feature_profiles": "Customer profiles",
+      "feature_catalogue": "Smart catalogue",
+      "feature_recommendations": "Recommendations",
+      "secure_access": "Secure access",
+      "authorized_only": "Access is restricted to authorised staff only."
+    },
+    "admin": {
+      "title": "Dashboard",
+      "subtitle": "Customer profiles, products and sales guidance",
+      "clients": "Customers",
+      "profiles": "Customer profiles",
+      "profile_detail": "Profile detail",
+      "products": "Products",
+      "categories": "Product categories",
+      "new_client": "New customer",
+      "client_detail": "Customer detail",
+      "edit_client": "Edit customer",
+      "new_product": "New product",
+      "product_detail": "Product detail",
+      "edit_product": "Edit product",
+      "new_category": "New category",
+      "category_detail": "Category detail",
+      "edit_category": "Edit category"
+    },
+    "dashboard": {
+      "administrator": "administrator",
+      "eyebrow": "FAnn CRM control centre",
+      "greeting": "Hello, {name}.",
+      "description": "Keep customer motivations, sales questions, objections and product recommendations in one place.",
+      "browse_profiles": "Browse profiles",
+      "browse_catalogue": "Browse catalogue",
+      "simulations": "Simulated probabilities",
+      "strong_matches": "Strong product matches",
+      "profile_overview": "Ten customer profiles",
+      "all_profiles": "All profiles",
+      "recent_activity": "Recent activity",
+      "new_customers": "New customers",
+      "all_customers": "All customers",
+      "no_customers": "No customers have been added yet.",
+      "catalogue": "Catalogue",
+      "latest_products": "Latest products",
+      "no_products": "No products have been added yet."
+    },
+    "section": {
+      "customer_profiles": "Customer profiles",
+      "create_customer_description": "Create an account and add the basic information needed for future offer personalisation.",
+      "catalogue_management": "Catalogue management",
+      "create_product_description": "Add a price range, character, sales guidance and probabilities for each customer profile.",
+      "catalogue_taxonomy": "Catalogue taxonomy",
+      "create_category_description": "Create a clear group for fragrances, skincare or make-up."
+    },
+    "upload": {
+      "drop_images": "Drop images here or click to select",
+      "image_limits": "JPG, PNG or WEBP, up to 10 MB",
+      "remove_file": "Remove file"
+    },
+    "client": {
+      "first_name": "First name", "last_name": "Last name", "email": "E-mail", "phone": "Phone",
+      "password": "Initial password", "password_help": "At least 8 characters; the customer can change it later.",
+      "role": "Role", "status": "Status", "account": "Customer account", "type": "Customer type",
+      "type_unassigned": "No customer type", "profile_summary": "Customer profile", "profile_missing": "The customer profile has not been completed yet.",
+      "aura": "Aura", "visual": "Customer appearance", "behavior": "Shopping behavior", "behavior_profile": "Behavior and motivation",
+      "commercial_profile": "Commercial potential", "business_potential": "Commercial potential", "typical_quote": "Typical quote",
+      "average_basket": "Average basket", "marketing_note": "Recommended messaging", "recommended_products": "Recommended products",
+      "recommendations_by_probability": "Products with at least 30% purchase probability for the assigned profile.",
+      "no_recommendations": "No products reach a 30% probability for the assigned profile."
+    },
+    "profile": {
+      "reference_data": "Conversation reference data",
+      "list_description": "Reference profiles help staff recognise customer motivation, ask the right questions and prepare for common objections.",
+      "number": "Profile number",
+      "name": "Profile name",
+      "selection_need": "How they choose / need",
+      "sales_questions": "3 sales questions",
+      "typical_objections": "Typical objections",
+      "first_question": "First recommended question",
+      "product_probabilities": "Likely products",
+      "product_probabilities_help": "Products with at least 30% purchase probability are ordered from highest to lowest.",
+      "names": {
+        "specific_fragrance": "1 · Looking for a specific fragrance (%)",
+        "gift_buyer": "2 · Gift buyer (%)",
+        "best_price_hunter": "3 · Best-price hunter (%)",
+        "new_fragrance_seeker": "4 · Looking for a new fragrance (%)",
+        "premium_customer": "5 · Premium customer (%)",
+        "social_media_customer": "6 · Social media customer (%)",
+        "indecisive_customer": "7 · Indecisive customer (%)",
+        "cosmetics_customer": "8 · Cosmetics customer (%)",
+        "informed_connoisseur": "9 · Informed connoisseur (%)",
+        "just_browsing": "10 · Just browsing (%)"
+      }
+    },
+    "category": {
+      "name": "Product category", "syscode": "System code", "description": "Description", "parent": "Parent group", "position": "Position",
+      "examples": "Categories can further organise the catalogue, for example men's fragrances, women's fragrances, skincare and make-up.",
+      "description_missing": "This category has no description yet.", "assigned_products": "Products in category", "no_products": "There are no products in this category yet."
+    },
+    "product": {
+      "name": "Product name", "sku": "SKU", "sku_help": "If left empty, the backend generates an SKU automatically.",
+      "ean": "EAN", "brand": "Brand", "categories": "Categories", "no_categories": "No category", "variant": "Variant", "price": "Price from", "approx_price": "Approximate price", "price_min": "Approximate price from (CZK)", "price_max": "Approximate price to (CZK)",
+      "stock": "In stock", "weight": "Weight / volume", "unit": "Unit", "published": "Published",
+      "description": "Description", "images": "Product images", "save_images": "Save new images", "existing_images": "Uploaded images",
+      "images_saved": "Images saved", "images_after_create": "Images can be uploaded from the product detail after it has been created.",
+      "description_missing": "This product has no description yet.", "is_published": "Published", "is_hidden": "Hidden", "catalog_data": "Catalogue data", "sales_data": "Sales data",
+      "character": "Character", "main_sales_argument": "Main sales argument", "alternative": "Alternative", "alternatives": "Alternative products", "alternatives_help": "Select existing products and set their order. Each alternative is stored as a separate relation.", "no_alternatives": "No alternative products are assigned.", "upsell_upgrade": "Upsell / upgrade", "basket_if_declined": "If upgrade is declined, offer", "purchase_probability": "Purchase probability", "profile_probabilities": "Simulated probability by profile", "profile_probabilities_help": "The value represents the simulated purchase probability for each customer profile."
+    },
+    "status": { "active": "Active", "inactive": "Inactive", "banned": "Blocked" },
+    "filter": { "title": "Filter overview", "all": "All options", "apply": "Apply filter", "reset": "Clear" },
+    "view": {
+      "table": "Table", "cards": "Cards", "switch_aria": "Switch between table and cards", "actions": "Actions",
+      "loading": "Loading data…", "load_error": "The record could not be loaded.", "empty": "No records match the criteria.", "records_count": "Total records: {count}",
+      "client_description": "Segment customers, understand their needs and create more relevant offers.",
+      "product_description": "Compare price ranges, character, sales arguments and product relevance for each customer profile.",
+      "category_description": "Maintain optional catalogue groups for fragrances, skincare and make-up."
+    },
+    "form": { "yes": "Yes", "no": "No", "delete_success_msg": "Record deleted successfully" },
+    "btn": { "delete": "Delete", "submit": "Save", "cancel": "Cancel", "edit": "Edit", "show_detail": "View detail", "back_to_list": "Back to overview" },
+    "message": { "delete_question": "Delete “{name}”?", "delete_question_multi": "Delete {length} records?" },
+    "aria": { "delete_selected": "Delete selected records", "create_new": "Create a new record" }
+  }
+}

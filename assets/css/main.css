@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme static {
+  --font-sans: "Manrope", system-ui, sans-serif;
+
+  --color-primary-50: #fff1f7;
+  --color-primary-100: #ffe4f0;
+  --color-primary-200: #fecddf;
+  --color-primary-300: #fda4c6;
+  --color-primary-400: #fb70a7;
+  --color-primary-500: #f23d86;
+  --color-primary-600: #d91f68;
+  --color-primary-700: #b81355;
+  --color-primary-800: #991347;
+  --color-primary-900: #80153f;
+  --color-primary-950: #4e0822;
+
+  --color-secondary-50: #fff8eb;
+  --color-secondary-100: #feebc7;
+  --color-secondary-200: #fdd58a;
+  --color-secondary-300: #fbb94d;
+  --color-secondary-400: #f99f24;
+  --color-secondary-500: #d89a2b;
+  --color-secondary-600: #d75f06;
+  --color-secondary-700: #b23f09;
+  --color-secondary-800: #91310f;
+  --color-secondary-900: #772910;
+  --color-secondary-950: #441205;
+}
+
+html,
+body,
+#__nuxt {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: #172033;
+  background: #f5f7fb;
+  text-rendering: optimizeLegibility;
+}
+
+.dark body {
+  color: #eef2f7;
+  background: #080d17;
+}
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+.crm-surface {
+  background-image:
+    radial-gradient(circle at 8% 4%, rgb(242 61 134 / 12%), transparent 30rem),
+    radial-gradient(circle at 92% 88%, rgb(216 154 43 / 10%), transparent 30rem),
+    linear-gradient(rgb(255 255 255 / 35%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(255 255 255 / 35%) 1px, transparent 1px);
+  background-size: auto, auto, 36px 36px, 36px 36px;
+}
+
+.dark .crm-surface {
+  background-image:
+    radial-gradient(circle at 8% 4%, rgb(242 61 134 / 16%), transparent 32rem),
+    radial-gradient(circle at 92% 88%, rgb(216 154 43 / 10%), transparent 30rem),
+    linear-gradient(rgb(255 255 255 / 2%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(255 255 255 / 2%) 1px, transparent 1px);
+}
+
+.crm-admin-shell {
+  position: relative;
+  isolation: isolate;
+  background:
+    radial-gradient(circle at 20% 0%, rgb(242 61 134 / 9%), transparent 34rem),
+    radial-gradient(circle at 100% 40%, rgb(216 154 43 / 7%), transparent 30rem),
+    #f5f7fb;
+}
+
+.dark .crm-admin-shell {
+  background:
+    radial-gradient(circle at 20% 0%, rgb(242 61 134 / 13%), transparent 34rem),
+    radial-gradient(circle at 100% 40%, rgb(216 154 43 / 7%), transparent 30rem),
+    #080d17;
+}
+
+.crm-admin-shell::before {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  content: "";
+  opacity: 0.45;
+  background-image: radial-gradient(rgb(100 116 139 / 15%) 0.7px, transparent 0.7px);
+  background-size: 22px 22px;
+}
+
+.crm-page-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding: 2rem 0 1.35rem;
+}
+
+.crm-eyebrow {
+  margin: 0 0 0.45rem;
+  color: var(--color-primary-600);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.crm-page-title {
+  margin: 0;
+  color: var(--ui-text-highlighted);
+  font-size: clamp(1.85rem, 4vw, 2.65rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1.05;
+}
+
+.crm-view-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid var(--ui-border);
+  border-radius: 1rem;
+  background: color-mix(in srgb, var(--ui-bg) 88%, transparent);
+  box-shadow: 0 10px 32px rgb(15 23 42 / 6%);
+  backdrop-filter: blur(14px);
+}
+
+.crm-data-panel {
+  border: 1px solid color-mix(in srgb, var(--ui-border) 82%, transparent);
+  border-radius: 1.15rem;
+  background: color-mix(in srgb, var(--ui-bg) 94%, transparent);
+  box-shadow: 0 18px 50px rgb(15 23 42 / 6%);
+  backdrop-filter: blur(16px);
+}
+
+.crm-record-card {
+  overflow: hidden;
+  border-color: color-mix(in srgb, var(--ui-border) 80%, transparent);
+  background:
+    linear-gradient(145deg, rgb(255 255 255 / 72%), transparent 55%),
+    var(--ui-bg);
+}
+
+.dark .crm-record-card {
+  background:
+    linear-gradient(145deg, rgb(242 61 134 / 7%), transparent 55%),
+    var(--ui-bg);
+}
+
+.crm-form-shell {
+  overflow: hidden;
+  border: 1px solid var(--ui-border);
+  border-radius: 1.5rem;
+  background: color-mix(in srgb, var(--ui-bg) 94%, transparent);
+  box-shadow: 0 24px 70px rgb(15 23 42 / 8%);
+  backdrop-filter: blur(18px);
+}
+
+.crm-hero-panel {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgb(255 255 255 / 15%);
+  border-radius: 1.75rem;
+  color: white;
+  background:
+    radial-gradient(circle at 90% 15%, rgb(216 154 43 / 42%), transparent 16rem),
+    linear-gradient(125deg, #4e0822 0%, #991347 52%, #d91f68 100%);
+  box-shadow: 0 28px 80px rgb(128 21 63 / 22%);
+}
+
+.crm-hero-panel::after {
+  position: absolute;
+  right: -3rem;
+  bottom: -5rem;
+  width: 18rem;
+  height: 18rem;
+  border: 1px solid rgb(255 255 255 / 15%);
+  border-radius: 999px;
+  content: "";
+  box-shadow: 0 0 0 2rem rgb(255 255 255 / 4%), 0 0 0 5rem rgb(255 255 255 / 3%);
+}
+
+@media (max-width: 720px) {
+  .crm-page-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .crm-view-switcher {
+    align-self: stretch;
+    justify-content: center;
+  }
+}

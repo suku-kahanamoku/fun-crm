@@ -1,0 +1,8 @@
+{
+  "syscode": "admin-dashboard",
+  "sources": {
+    "clients": { "restUrl": "/api/admin/client?limit=5" },
+    "products": { "restUrl": "/api/admin/product?limit=5" },
+    "categories": { "restUrl": "/api/admin/category?limit=5" }
+  }
+}

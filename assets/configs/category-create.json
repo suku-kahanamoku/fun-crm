@@ -1,0 +1,17 @@
+{
+  "syscode": "admin-product-category-create",
+  "postUrl": "/api/admin/category",
+  "method": "POST",
+  "fields": [
+    {
+      "name": "parent_id",
+      "type": "select",
+      "label": "$.category.parent",
+      "restOptions": { "url": "/api/admin/category?limit=100", "label": "name", "value": "id" }
+    },
+    { "name": "name", "type": "text", "label": "$.category.name", "required": true },
+    { "name": "syscode", "type": "text", "label": "$.category.syscode", "required": true },
+    { "name": "description", "type": "textarea", "label": "$.category.description" },
+    { "name": "position", "type": "number", "label": "$.category.position" }
+  ]
+}

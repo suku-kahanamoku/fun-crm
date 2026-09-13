@@ -1,0 +1,63 @@
+{
+  "syscode": "admin-client-create",
+  "postUrl": "/api/admin/client",
+  "method": "POST",
+  "fields": [
+    {
+      "name": "first_name",
+      "type": "text",
+      "label": "$.client.first_name",
+      "required": true
+    },
+    {
+      "name": "last_name",
+      "type": "text",
+      "label": "$.client.last_name",
+      "required": true
+    },
+    {
+      "name": "email",
+      "type": "email",
+      "label": "$.client.email",
+      "required": true
+    },
+    {
+      "name": "phone",
+      "type": "text",
+      "label": "$.client.phone"
+    },
+    {
+      "name": "password",
+      "type": "password",
+      "label": "$.client.password",
+      "required": true,
+      "min": 8,
+      "help": "$.client.password_help"
+    },
+    {
+      "name": "role_id",
+      "type": "select",
+      "label": "$.client.role",
+      "restOptions": {
+        "url": "/api/admin/role?limit=100",
+        "label": "label",
+        "value": "id"
+      }
+    },
+    {
+      "name": "status",
+      "type": "select",
+      "label": "$.client.status",
+      "options": [
+        {
+          "value": "active",
+          "label": "$.status.active"
+        },
+        {
+          "value": "inactive",
+          "label": "$.status.inactive"
+        }
+      ]
+    }
+  ]
+}

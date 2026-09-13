@@ -1,0 +1,79 @@
+{
+  "syscode": "admin-client-list",
+  "restUrl": "/api/admin/client",
+  "deleteUrl": "/api/admin/client/${item.id}",
+  "pagination": {
+    "limit": 20
+  },
+  "factory": {
+    "url": "${first_name}-${last_name}--${id}"
+  },
+  "fields": [
+    {
+      "name": "email",
+      "type": "text",
+      "label": "$.client.email",
+      "operator": {
+        "value": "$regex",
+        "enabled": true
+      },
+      "filterable": true,
+      "clearable": true
+    },
+    {
+      "name": "first_name",
+      "type": "text",
+      "label": "$.client.first_name",
+      "operator": {
+        "value": "$regex",
+        "enabled": true
+      },
+      "clearable": true
+    },
+    {
+      "name": "last_name",
+      "type": "text",
+      "label": "$.client.last_name",
+      "operator": {
+        "value": "$regex",
+        "enabled": true
+      },
+      "filterable": true,
+      "clearable": true
+    },
+    {
+      "name": "profile_id",
+      "colName": "profiles",
+      "type": "select",
+      "label": "$.client.type",
+      "filterable": true,
+      "clearable": true,
+      "restOptions": {
+        "url": "/api/admin/profile?limit=100",
+        "label": "name",
+        "value": "id"
+      }
+    },
+    {
+      "name": "status",
+      "type": "select",
+      "label": "$.client.status",
+      "options": [
+        {
+          "value": "active",
+          "label": "$.status.active"
+        },
+        {
+          "value": "inactive",
+          "label": "$.status.inactive"
+        },
+        {
+          "value": "banned",
+          "label": "$.status.banned"
+        }
+      ],
+      "filterable": true,
+      "clearable": true
+    }
+  ]
+}

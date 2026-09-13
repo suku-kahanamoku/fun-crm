@@ -1,0 +1,58 @@
+{
+  "syscode": "admin-product-list",
+  "restUrl": "/api/admin/product",
+  "deleteUrl": "/api/admin/product/${item.id}",
+  "pagination": { "limit": 20 },
+  "factory": { "url": "${name}--${id}" },
+  "relations": {
+    "categories": {
+      "restUrl": "/api/admin/category?limit=100",
+      "label": "name",
+      "value": "id"
+    }
+  },
+  "fields": [
+    {
+      "name": "name",
+      "type": "text",
+      "label": "$.product.name",
+      "operator": { "value": "$regex", "enabled": true },
+      "filterable": true,
+      "clearable": true
+    },
+    {
+      "name": "sku",
+      "type": "text",
+      "label": "$.product.sku",
+      "operator": { "value": "$regex", "enabled": true },
+      "filterable": true,
+      "clearable": true
+    },
+    {
+      "name": "category.syscode",
+      "colName": "category_ids",
+      "type": "select",
+      "label": "$.product.categories",
+      "restOptions": {
+        "url": "/api/admin/category?limit=100",
+        "label": "name",
+        "value": "syscode"
+      },
+      "filterable": true,
+      "clearable": true
+    },
+    { "name": "data.character", "type": "text", "label": "$.product.character", "sortable": false },
+    { "name": "price_range", "type": "text", "label": "$.product.approx_price", "sortable": false },
+    {
+      "name": "published",
+      "type": "select",
+      "label": "$.product.published",
+      "options": [
+        { "value": 1, "label": "$.form.yes" },
+        { "value": 0, "label": "$.form.no" }
+      ],
+      "filterable": true,
+      "clearable": true
+    }
+  ]
+}

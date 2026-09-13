@@ -1,0 +1,94 @@
+{
+  "syscode": "admin-product-create",
+  "postUrl": "/api/admin/product",
+  "method": "POST",
+  "fields": [
+    {
+      "name": "price",
+      "type": "hidden"
+    },
+    {
+      "name": "description",
+      "type": "hidden"
+    },
+    {
+      "name": "data.approx_price.currency",
+      "type": "hidden"
+    },
+    {
+      "name": "name",
+      "type": "text",
+      "label": "$.product.name",
+      "required": true
+    },
+    {
+      "name": "sku",
+      "type": "text",
+      "label": "$.product.sku",
+      "help": "$.product.sku_help"
+    },
+    {
+      "name": "category_ids",
+      "type": "select",
+      "label": "$.product.categories",
+      "multiple": true,
+      "required": true,
+      "restOptions": {
+        "url": "/api/admin/category?limit=100",
+        "label": "name",
+        "value": "id"
+      }
+    },
+    {
+      "name": "data.character",
+      "type": "text",
+      "label": "$.product.character",
+      "required": true
+    },
+    {
+      "name": "data.approx_price.min",
+      "type": "number",
+      "label": "$.product.price_min",
+      "required": true,
+      "digits": 2
+    },
+    {
+      "name": "data.approx_price.max",
+      "type": "number",
+      "label": "$.product.price_max",
+      "required": true,
+      "digits": 2
+    },
+    {
+      "name": "data.main_sales_argument",
+      "type": "textarea",
+      "label": "$.product.main_sales_argument",
+      "required": true
+    },
+    {
+      "name": "data.upsell_upgrade",
+      "type": "textarea",
+      "label": "$.product.upsell_upgrade"
+    },
+    {
+      "name": "data.basket_if_upgrade_declined",
+      "type": "textarea",
+      "label": "$.product.basket_if_declined"
+    },
+    {
+      "name": "published",
+      "type": "select",
+      "label": "$.product.published",
+      "options": [
+        {
+          "value": 1,
+          "label": "$.form.yes"
+        },
+        {
+          "value": 0,
+          "label": "$.form.no"
+        }
+      ]
+    }
+  ]
+}

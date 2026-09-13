@@ -1,0 +1,7 @@
+{
+  "syscode": "admin-client-detail",
+  "restUrl": "/api/admin/client/${route.meta.id}",
+  "relations": {
+    "products": { "restUrl": "/api/admin/product?limit=100" }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "syscode": "admin-client-update",
+  "restUrl": "/api/admin/client/${route.meta.id}",
+  "patchUrl": "/api/admin/client/${item.id}",
+  "method": "PATCH",
+  "fields": [
+    {
+      "name": "first_name",
+      "type": "text",
+      "label": "$.client.first_name",
+      "required": true
+    },
+    {
+      "name": "last_name",
+      "type": "text",
+      "label": "$.client.last_name",
+      "required": true
+    },
+    {
+      "name": "email",
+      "type": "email",
+      "label": "$.client.email",
+      "required": true
+    },
+    {
+      "name": "phone",
+      "type": "text",
+      "label": "$.client.phone"
+    },
+    {
+      "name": "status",
+      "type": "select",
+      "label": "$.client.status",
+      "options": [
+        {
+          "value": "active",
+          "label": "$.status.active"
+        },
+        {
+          "value": "inactive",
+          "label": "$.status.inactive"
+        },
+        {
+          "value": "banned",
+          "label": "$.status.banned"
+        }
+      ]
+    },
+    {
+      "name": "role_id",
+      "type": "select",
+      "label": "$.client.role",
+      "restOptions": {
+        "url": "/api/admin/role?limit=100",
+        "label": "label",
+        "value": "id"
+      }
+    }
+  ]
+}

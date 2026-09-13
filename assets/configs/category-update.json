@@ -1,0 +1,17 @@
+{
+  "syscode": "admin-product-category-update",
+  "restUrl": "/api/admin/category/${route.meta.id}",
+  "patchUrl": "/api/admin/category/${item.id}",
+  "method": "PATCH",
+  "fields": [
+    {
+      "name": "parent_id",
+      "type": "select",
+      "label": "$.category.parent",
+      "restOptions": { "url": "/api/admin/category?limit=100", "label": "name", "value": "id" }
+    },
+    { "name": "name", "type": "text", "label": "$.category.name", "required": true },
+    { "name": "description", "type": "textarea", "label": "$.category.description" },
+    { "name": "position", "type": "number", "label": "$.category.position" }
+  ]
+}

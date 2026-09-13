@@ -1,0 +1,8 @@
+{
+  "syscode": "admin-product-category-detail",
+  "restUrl": "/api/admin/category/${route.meta.id}",
+  "relations": {
+    "categories": { "restUrl": "/api/admin/category?limit=100" },
+    "products": { "restUrl": "/api/admin/product?limit=100" }
+  }
+}
