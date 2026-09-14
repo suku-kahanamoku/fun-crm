@@ -2,6 +2,11 @@
   "name": "fun-crm",
   "private": true,
   "type": "module",
+  "packageManager": "npm@11.19.0",
+  "engines": {
+    "node": "24.21.0",
+    "npm": "11.19.0"
+  },
   "scripts": {
     "build": "NODE_OPTIONS=--max-old-space-size=4096 nuxt build",
     "dev": "nuxt dev",
