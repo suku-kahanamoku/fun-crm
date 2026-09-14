@@ -45,13 +45,15 @@ role a adresy bez uživatelské session.
 
 ```dotenv
 PHP_API_BASE_URL=https://api.example.com/api
-FRONTEND_HOST=https://crm.example.com
+FRONTEND_HOST=https://fann-crm.netlify.app
 INTERNAL_API_KEY=<stejný-serverový-klíč-jako-v-php-core>
 NUXT_SESSION_PASSWORD=<náhodná-hodnota-alespoň-32-znaků>
 ```
 
 Na Netlify nastavte tyto hodnoty jako neveřejné environment variables. Po změně
 proměnných je potřeba nový deploy, protože je serverová aplikace načítá při startu.
+Produkční php-core musí současně obsahovat mapování
+`fann-crm.netlify.app:fun` v `FRANCHISE_CODES`.
 
 ## Datový model
 
